@@ -1,0 +1,19 @@
+
+#main {
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    padding: 10%;
+    color:azure;
+    border-color: #7289da;
+    border: 20cm;
+    text-align: center;
+   
+}
+#login_buttons {
+    background-position: center;
+   
+    color:azure;
+    border-color: #7289da;
+    border: 20cm;
+
+}

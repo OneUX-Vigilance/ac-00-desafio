@@ -1,0 +1,16 @@
+#bodi {
+    background-position: center;
+    background-image: url("../images/backgrounda.jpg");
+}
+#hello {
+    color:azure;
+   margin: auto;
+}
+#div_register {
+    padding: 10%;
+    color:azure;
+    border-color: #7289da;
+    border: 20cm;
+    text-align: center;
+   
+}
