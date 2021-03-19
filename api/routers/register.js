@@ -11,9 +11,9 @@ module.exports = {
      * @param {express.response} res 
      */
     run: async (req,res) =>{
-
+        console.log("new Register");
         const body = req.body
-       
+        console.log(body)
         if (!body['name'] || !body['password']) {
            return res.status(400).send(JSON.stringify({
                code:"MISS_UP",
