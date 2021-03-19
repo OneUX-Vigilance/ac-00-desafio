@@ -11,7 +11,6 @@ module.exports = {
      * @param {express.response} res 
      */
     run: async (req,res) =>{
-        console.log("ROK")
 
         const body = req.body
        
@@ -45,16 +44,19 @@ module.exports = {
                 resp:"This user exists."
             }))
         }
+        const SafeCode =  Math.round(Math.random() * 99999999999999)
         bcrypt.genSalt(10, function(err, salt) {
             bcrypt.hash(password, salt, async function(err, hash) {
                 await users.insertOne({
                     name:username,
-                    password: hash
+                    password: hash,
+                    SafeCode: SafeCode,
                 }).then(() =>{
                 
                     return res.status(200).send(JSON.stringify({
                         code:"OK",
-                        resp:"User has been registed."
+                        resp:"User has been registed.",
+                        SafeCode:SafeCode
                     }));
                 });
             });

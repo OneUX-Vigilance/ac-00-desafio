@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer Login</title>
+</head>
+<body id="bodi">
+    <form id="form_login">
+       
+            <h1>
+                Fazer Login
+            </h1>
+            <div class="form-group">
+        
+              <input type="text" class="form-control" id="name" aria-describedby="noAcc" placeholder="Digite seu nome" required>
+              <input type="password" class="form-control" id="password" placeholder="Digite sua senha" minlength="8" required>
+              <small id="noAcc" class="form-text text-muted"><a id="noAcc" href="/register.html">Não tem uma conta?</a></small>
+            </div>
+            
+        <button type="submit" class="btn btn-primary" id="btn_login">Login</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/front.login.js"></script>
+</body>
+</html>

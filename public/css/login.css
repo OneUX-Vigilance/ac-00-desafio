@@ -1,0 +1,12 @@
+#bodi {
+    background-position: center;
+    background-image: url("../images/background.jpg");
+}
+#form_login {
+    padding: 10%;
+    color: azure;
+    text-align: center;
+}
+#noAcc{
+    color: azure;
+}

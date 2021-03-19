@@ -1,6 +1,6 @@
 
-const btn_register = document.getElementById("btn_register")
-btn_register.addEventListener("click", registerPress);
+const btn_login = document.getElementById("btn_register")
+btn_login.addEventListener("click", registerPress);
 async function registerPress(){
     
     const username = document.getElementById("username").value;
@@ -22,25 +22,27 @@ async function registerPress(){
     ttext.innerText = " Registrando..."
     ltext.appendChild(ttext)
 
-    btn_register.disabled = true;
-    btn_register.innerText = ""
-    btn_register.appendChild(l)
-    btn_register.appendChild(ltext)
+    btn_login.disabled = true;
+    btn_login.innerText = ""
+    btn_login.appendChild(l)
+    btn_login.appendChild(ltext)
     const reg = await Register(username,password)
-    while (btn_register.firstChild) {
-        btn_register.removeChild(btn_register.firstChild);
+    while (btn_login.firstChild) {
+        btn_login.removeChild(btn_login.firstChild);
     }   
     if (reg.code == "OK"){
         window.localStorage.setItem("ACCOUNT",{
             name:username,
             pwd:password,
+            SafeCode:reg.SafeCode
         })
-        btn_register.innerText = "[ 👌 ] -Sucesso."
-        btn_register.className = "btn btn-success"
+
+        btn_login.innerText = "[ 👌 ] -Sucesso."
+        btn_login.className = "btn btn-success"
     }
     if (reg.code == "USER_EXISTS") {
-        btn_register.className = "btn btn-danger"
-        btn_register.innerText = "ERR! Já tem uma conta com esse nome."
+        btn_login.className = "btn btn-danger"
+        btn_login.innerText = "ERR! Já tem uma conta com esse nome."
         setTimeout(() => {
             location.reload();
         }, 5000);
